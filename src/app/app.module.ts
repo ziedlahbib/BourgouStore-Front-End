@@ -12,14 +12,19 @@ import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routing';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { ArticleManagmentComponent } from './pages/article-managment/article-managment.component';
+import { HttpClientModule } from "@angular/common/http";
+import { AjoutArticleComponent } from './pages/article-managment/ajout-article/ajout-article.component';
+import { ReactiveFormsModule } from "@angular/forms";
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    ArticleManagmentComponent
+    AjoutArticleComponent,
+    
   ],
   imports: [
     BrowserAnimationsModule,
@@ -30,9 +35,12 @@ import { ArticleManagmentComponent } from './pages/article-managment/article-man
     NavbarModule,
     ToastrModule.forRoot(),
     FooterModule,
-    FixedPluginModule
+    FixedPluginModule,
+    HttpClientModule,
+    ReactiveFormsModule
+
   ],
-  providers: [],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

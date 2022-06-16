@@ -7,8 +7,6 @@ export class Article {
     id: String;
     description: String;
     prix: Number;
-    endDate: Date;
-    object: String;
     categorie:Categorie;
     type:Type;
     cmd:Commande[];

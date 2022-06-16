@@ -27,6 +27,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatDialogModule} from '@angular/material/dialog';
+import { ArticleManagmentComponent } from 'app/pages/article-managment/article-managment.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -35,6 +37,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     RouterModule.forChild(AdminLayoutRoutes),
     FormsModule,
     NgbModule,
+    HttpClientModule,
     MatPaginatorModule,
     MatCardModule,
     ReactiveFormsModule,
@@ -53,6 +56,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     IconsComponent,
     MapsComponent,
     NotificationsComponent,
+    ArticleManagmentComponent
   ]
 })
 
