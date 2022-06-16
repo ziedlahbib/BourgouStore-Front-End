@@ -21,7 +21,7 @@ export class ArticleManagmentComponent implements OnInit {
   imageSource:String;
   counters = [100, 200, 10];
   meilleurDestination:any;
-  displayedColumns = ['image','description', 'categorie', 'type'];
+  displayedColumns = ['image','description', 'categorie', 'type','name','prix','option'];
   dataSource: MatTableDataSource<Article>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;

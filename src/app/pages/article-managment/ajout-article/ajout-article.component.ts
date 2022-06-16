@@ -38,9 +38,10 @@ export class AjoutArticleComponent implements OnInit {
   initForm() {
     this.articleform = this.formBuilder.group({
       description: ['', Validators.required],
-      categorie: [''],
-      type: [''],
-      prix: ['', Validators.required],
+      name: ['', Validators.required],
+      categorie: ['',Validators.required],
+      type: ['',Validators.required],
+      prix: ['', [Validators.required,,Validators.pattern('[0-9]*.'+'[0-9]*')]],
   });
 
   this.articleform.valueChanges.subscribe(
@@ -50,7 +51,7 @@ export class AjoutArticleComponent implements OnInit {
 
 ajouter(){
   console.log(this.articleform.value);
-this.articleservice.ajoutArticle(this.articleform.value).subscribe(
+  this.articleservice.ajoutArticle(this.articleform.value).subscribe(
   data=>{
     console.log('ssss',data)
     this.article=data;

@@ -36,6 +36,6 @@ export class ArticleServiceService {
       return this.http.get<FileDBTrip>(`${this.getfiledetail}/${id}`);
     }
     affecterfileauarticle(id:String,idf:number,article :Article):Observable<Article>{
-      return this.http.put<Article>("/api/FileTrip/affecter-fileToArticlep/"+id+"/"+idf,article);
+      return this.http.put<Article>("/api/FileTrip/affecter-fileToArticle/"+id+"/"+idf,article);
     }
 }
