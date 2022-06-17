@@ -15,6 +15,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { HttpClientModule } from "@angular/common/http";
 import { AjoutArticleComponent } from './pages/article-managment/ajout-article/ajout-article.component';
 import { ReactiveFormsModule } from "@angular/forms";
+import { UserLayoutComponent } from './src/app/layouts/user-layout/user-layout.component';
 
 
 
@@ -24,6 +25,7 @@ import { ReactiveFormsModule } from "@angular/forms";
     AppComponent,
     AdminLayoutComponent,
     AjoutArticleComponent,
+    UserLayoutComponent,
     
   ],
   imports: [
