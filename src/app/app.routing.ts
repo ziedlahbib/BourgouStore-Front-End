@@ -10,7 +10,7 @@ export const AppRoutes: Routes = [
     pathMatch: 'full',
   }, */
   {
-    path: 'admin',
+    path: '',
     component: AdminLayoutComponent,
     children: [
         {
@@ -18,7 +18,7 @@ export const AppRoutes: Routes = [
       loadChildren: () => import('./layouts/admin-layout/admin-layout.module').then(x => x.AdminLayoutModule)
   }]},
   {
-    path: 'user',
+    path: '',
     component: UserLayoutComponent,
     children: [
         {
