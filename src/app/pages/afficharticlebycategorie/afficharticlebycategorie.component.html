@@ -26,7 +26,7 @@
  
   <!--lest of trip-->
   <div >
-   
+
      <!--carousel-->
  
  <div class="section" id="carousel" >
@@ -60,9 +60,9 @@
         <h5 class="card-title" style="font-weight: bold;font-size: 50px;">{{t.name}}</h5>
         <p class="card-text" style="color: rgb(63, 108, 108);">prix:   {{t.prix}} dt</p>
         <p class="card-text" style="color: red;">description:  {{t.description}}</p>
-        <div class="card-body">
-          <a (click)="ajoutarticle(t)" class="card-link">more detail</a>
-        </div>
+        
+          <button (click)="ajoutarticle(t)" class="card-link">BUY</button>
+          <div>{{nbr}}</div>
       </div>
     </div>
   </div>

@@ -12,7 +12,8 @@ import { Input } from '@angular/core';
 export class AfficharticlebycategorieComponent implements OnInit {
 
   listofarticle:Article[];
-  @Input()  articlepourachet:Article[];
+  nbr:Number;
+  @Input()  articlepourachet:Article[]=[];
   listofarticlesPagination :Article[];
   listofarticlesearch:Article[]
   start=0;
@@ -53,6 +54,9 @@ export class AfficharticlebycategorieComponent implements OnInit {
   }
 ajoutarticle(article:Article){
 this.articlepourachet.push(article);
+this.nbr=this.articlepourachet.length;
+console.log(this.nbr)
+  
 }
 
 }
