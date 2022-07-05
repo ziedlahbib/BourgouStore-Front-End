@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AfficharticlebycategorieComponent } from 'app/pages/afficharticlebycategorie/afficharticlebycategorie.component';
 
 @NgModule({
     imports: [ RouterModule, CommonModule, NgbModule ],

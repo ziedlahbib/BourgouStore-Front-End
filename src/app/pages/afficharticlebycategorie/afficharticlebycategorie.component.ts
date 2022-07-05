@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Article } from 'app/model/article.model';
 import { ArticleServiceService } from 'app/service/article-service.service';
 import { PageEvent } from '@angular/material/paginator';
+import { Input } from '@angular/core';
 
 @Component({
   selector: 'app-afficharticlebycategorie',
@@ -11,6 +12,7 @@ import { PageEvent } from '@angular/material/paginator';
 export class AfficharticlebycategorieComponent implements OnInit {
 
   listofarticle:Article[];
+  @Input()  articlepourachet:Article[];
   listofarticlesPagination :Article[];
   listofarticlesearch:Article[]
   start=0;
@@ -49,6 +51,8 @@ export class AfficharticlebycategorieComponent implements OnInit {
     }
     this.listofarticlesPagination = this.listofarticle.slice(startIndex, endIndex);
   }
-
+ajoutarticle(article:Article){
+this.articlepourachet.push(article);
+}
 
 }

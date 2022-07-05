@@ -58,10 +58,10 @@
       <img *ngIf="t.files!!=null" src="http://localhost:8085/FileTrip/files/{{t.files.id}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title" style="font-weight: bold;font-size: 50px;">{{t.name}}</h5>
-        <p class="card-text" style="color: rgb(63, 108, 108);">prix{{t.prix}}</p>
-        <p class="card-text" style="color: red;">type{{t.type}}</p>
+        <p class="card-text" style="color: rgb(63, 108, 108);">prix:   {{t.prix}} dt</p>
+        <p class="card-text" style="color: red;">description:  {{t.description}}</p>
         <div class="card-body">
-          <a [routerLink]="['/detail', t.idTrip ]" class="card-link">more detail</a>
+          <a (click)="ajoutarticle(t)" class="card-link">more detail</a>
         </div>
       </div>
     </div>

@@ -15,7 +15,9 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { HttpClientModule } from "@angular/common/http";
 
 import { ReactiveFormsModule } from "@angular/forms";
-import { UserLayoutComponent } from './src/app/layouts/user-layout/user-layout.component';
+import { UserLayoutComponent } from "./layouts/user-layout/user-layout.component";
+
+
 
 
 
