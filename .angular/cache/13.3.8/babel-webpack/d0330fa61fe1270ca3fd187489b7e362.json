@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { AfficharticlebycategorieComponent } from 'app/pages/afficharticlebycategorie/afficharticlebycategorie.component';\nexport const UserLayoutRoutes = [{\n  path: 'AfficharticlebycategorieComponent',\n  component: AfficharticlebycategorieComponent\n}];","map":null,"metadata":{},"sourceType":"module"}

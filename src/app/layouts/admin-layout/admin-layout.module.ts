@@ -29,6 +29,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ArticleManagmentComponent } from 'app/pages/article-managment/article-managment.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AjoutArticleComponent } from 'app/pages/article-managment/ajout-article/ajout-article.component';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { HttpClientModule } from '@angular/common/http';
     IconsComponent,
     MapsComponent,
     NotificationsComponent,
-    ArticleManagmentComponent
+    ArticleManagmentComponent,
+    AjoutArticleComponent,
   ]
 })
 

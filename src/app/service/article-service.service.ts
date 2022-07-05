@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { HttpClient, HttpEvent, HttpHeaders, HttpParams, HttpRequest } from '@angular/common/http';
 import { Article } from 'app/model/article.model';
 import { FileDBTrip } from 'app/model/file-dbtrip.model';
+import { Categorie } from 'app/model/categorie';
 
 @Injectable({
   providedIn: 'root'
@@ -13,12 +14,16 @@ export class ArticleServiceService {
   addarticleUrl="/api/article/add-article";
   uploadfilef="/api/FileTrip/uploadf";
   getfiledetail="/api/FileTrip/filesdetail";
+  getArticleBygategorieurl="/api/article/get-article-by-categorie"
 
   constructor(private http : HttpClient) { }
 
   affichArticle() : Observable<Article[]> {
     return this.http.get<Article[]>(this.getArticleUrl);
     }
+    affichArticlebycategorieUnivers_Gaming() : Observable<Article[]> {
+      return this.http.get<Article[]>(`${this.getArticleBygategorieurl}/Univers_Gaming`);
+      }
     ajoutArticle(article :Article): Observable<Article>{
       return this.http.post<Article>(`${this.addarticleUrl}`,article);
     }

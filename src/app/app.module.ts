@@ -13,9 +13,12 @@ import { AppRoutes } from './app.routing';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { HttpClientModule } from "@angular/common/http";
-import { AjoutArticleComponent } from './pages/article-managment/ajout-article/ajout-article.component';
+
 import { ReactiveFormsModule } from "@angular/forms";
 import { UserLayoutComponent } from './src/app/layouts/user-layout/user-layout.component';
+
+
+
 
 
 
@@ -24,8 +27,9 @@ import { UserLayoutComponent } from './src/app/layouts/user-layout/user-layout.c
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    AjoutArticleComponent,
     UserLayoutComponent,
+
+
     
   ],
   imports: [
