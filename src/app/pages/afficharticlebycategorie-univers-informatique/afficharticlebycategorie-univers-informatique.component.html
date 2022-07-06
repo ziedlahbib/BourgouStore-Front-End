@@ -1,82 +1,78 @@
 
  <style>
-    .zied{
-      font-size: 40px;
-      font-weight: bold;
-      color: rgb(35, 31, 86);
-    }
- .card-columns{
-   display: inline-block;
- }
- #ziedpag {
-   color: blanchedalmond;
-   border: #FAFAD2;;
-   height: 40px;
-   width: 210px;
-   text-align: center;
-   text-decoration: none;
-   display: inline-block;
-   border-radius: 20%;
-   font-size: 16px;
-   margin: 10px 50px 20px;
- 
- }
-  </style>
- 
- 
-  <!--lest of trip-->
-  <div >
+  .zied{
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(35, 31, 86);
+  }
+.card-columns{
+ display: inline-block;
+}
+#ziedpag {
+ color: blanchedalmond;
+ border: #FAFAD2;;
+ height: 40px;
+ width: 210px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ border-radius: 20%;
+ font-size: 16px;
+ margin: 10px 50px 20px;
 
-     <!--carousel-->
- 
- <div class="section" id="carousel" >
-     <div class="container">
-         <div class="tim-title">
-             <h3></h3>
-         </div>
-         <div class="row">
-             <div class="col-md-8 mr-auto ml-auto">
-                 <div class="card page-carousel">
-                     <ngb-carousel >
-                         <ng-template ngbSlide *ngFor="let t of listofarticle">
-                             <img *ngIf="t.files!!=null" src="http://localhost:8085/FileTrip/files/{{t.files.id}}" alt="Random first slide" >
-                             <div class="carousel-caption">
-                                 <p style="font-weight: bold; font-size: xx-large;">{{t.name}}</p>
-                             </div>
-                         </ng-template>
-                     </ngb-carousel>
-                 </div>
-             </div>
-         </div>
-     </div>
-   </div>
- 
+}
+</style>
 
- <div class="row row-cols-1 row-cols-md-3">
-  <div class="col mb-4"*ngFor="let t of listofarticlesPagination">
-    <div class="card h-100" >
-      <img *ngIf="t.files!!=null" src="http://localhost:8085/FileTrip/files/{{t.files.id}}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title" style="font-weight: bold;font-size: 50px;">{{t.name}}</h5>
-        <p class="card-text" style="color: rgb(63, 108, 108);">prix:   {{t.prix}} dt</p>
-        <p class="card-text" style="color: red;">description:  {{t.description}}</p>
-        
-          <button (click)="ajoutarticle(t)" class="card-link">BUY</button>
-          <div>{{nbr}}</div>
-      </div>
-    </div>
-  </div>
- </div>
-        <div class="col-12" *ngIf="listofarticlesPagination">
-          <mat-paginator [length]="listofarticle.length" [pageSize]="6" [pageSizeOptions]="[6, 12, 18]" (page)="paginate($event)">
- 
-          </mat-paginator>
- 
-        </div>
- 
- 
- </div>
-    
- 
 
- 
+<!--lest of trip-->
+<div style="margin-left: 20% ;margin-right: 20%;" >
+
+   <!--carousel-->
+
+          <div class="section" id="carousel" >
+            <div class="container">
+              <div class="tim-title">
+                  <h3>Univers gaming</h3>
+              </div>
+              <div class="row">
+                  <div class="col-md-8 mr-auto ml-auto">
+                      <div class="card page-carousel">
+                          <ngb-carousel >
+                              <ng-template ngbSlide *ngFor="let t of listofarticle">
+                                  <img *ngIf="t.files!!=null" src="http://localhost:8085/FileTrip/files/{{t.files.id}}" alt="Random first slide" >
+                                  <div class="carousel-caption">
+                                      <p style="font-weight: bold; font-size: xx-large;">{{t.name}}</p>
+                                  </div>
+                              </ng-template>
+                          </ngb-carousel>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          
+
+
+      <div class="row row-cols-1 row-cols-md-3">
+        <div class="col mb-4"*ngFor="let t of listofarticlesPagination">
+          <div class="card h-100" >
+            <img *ngIf="t.files!!=null" src="http://localhost:8085/FileTrip/files/{{t.files.id}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" style="font-weight: bold;font-size: 50px;">{{t.name}}</h5>
+              <p class="card-text" style="color: rgb(63, 108, 108);">prix:   {{t.prix}} dt</p>
+              <p class="card-text" style="color: red;">description:  {{t.description}}</p>
+              
+                <button (click)="ajoutarticle(t)" class="card-link">BUY</button>
+                <div>{{nbr}}</div>
+            </div>
+          </div>
+        </div>        
+</div>
+            <div class="col-12" *ngIf="listofarticlesPagination">
+            <mat-paginator [length]="listofarticle.length" [pageSize]="6" [pageSizeOptions]="[6, 12, 18]" (page)="paginate($event)">
+  
+            </mat-paginator>
+  
+          </div>
+  
+
+
