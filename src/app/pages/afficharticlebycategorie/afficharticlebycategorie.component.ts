@@ -56,4 +56,32 @@ export class AfficharticlebycategorieComponent implements OnInit {
     this.newArticleEvent.emit(value);
   }
 */
+itemsCart:any[]=[]
+
+
+addtoCart(article:Article){
+    console.log(article);
+    let cartDataNull=localStorage.getItem('localCart');
+    if(cartDataNull == null){
+  let storeDataGet:any=[];
+  storeDataGet.push(article);
+  localStorage.setItem('localCart',JSON.stringify(storeDataGet));
+      }else{
+  var id=article.id;
+  let index:number=-1;
+  this.itemsCart= JSON.parse(localStorage.getItem('localCart')) ;
+  if(index == -1){
+    this.itemsCart.push(article);
+    localStorage.setItem('localCart',JSON.stringify(this.itemsCart));
+  }
+  else{
+    localStorage.setItem('localCart',JSON.stringify(article));
+  
+  }
+}
+
+
+
+}
+
 }

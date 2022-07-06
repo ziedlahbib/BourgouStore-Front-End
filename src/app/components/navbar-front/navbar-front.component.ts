@@ -45,6 +45,8 @@ export class NavbarFrontComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.cartItemFunc();
+
         const navbar: HTMLElement = this.element.nativeElement;
         this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
 
@@ -112,4 +114,11 @@ export class NavbarFrontComponent implements OnInit {
         this.nbr=this.articlepourachet.length;
     }
     */
+    cartItem:number=0;
+    cartItemFunc(){
+        if(localStorage.getItem('localCart')!=null){
+            var cartCount=JSON.parse(localStorage.getItem('localCart'));
+            this.cartItem=cartCount.length;
+    }
+    }
 }

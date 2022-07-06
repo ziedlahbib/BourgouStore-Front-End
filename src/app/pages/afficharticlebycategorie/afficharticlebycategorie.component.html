@@ -64,8 +64,9 @@
                 <p class="card-text" style="color: rgb(63, 108, 108);">prix:   {{t.prix}} dt</p>
                 <p class="card-text" style="color: red;">description:  {{t.description}}</p>
                 
-                  <button (click)="addnewArticle(neArticle.value)" class="card-link">BUY</button>
-                  <div>{{nbr}}</div>
+                  <!-- <button (click)="addnewArticle(neArticle.value)" class="card-link">BUY</button>-->
+                  <button (click)="addtoCart(t)" class="card-link">ajouter au panier</button>
+                  
               </div>
             </div>
           </div>        
