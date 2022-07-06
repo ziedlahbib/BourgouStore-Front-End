@@ -24,6 +24,12 @@ export class ArticleServiceService {
     affichArticlebycategorieUnivers_Gaming() : Observable<Article[]> {
       return this.http.get<Article[]>(`${this.getArticleBygategorieurl}/Univers_Gaming`);
       }
+      affichArticlebycategorieUnivers_Informatique() : Observable<Article[]> {
+        return this.http.get<Article[]>(`${this.getArticleBygategorieurl}/Univers_Informatique`);
+        }
+        affichArticlebycategorieUnivers_Telephonie() : Observable<Article[]> {
+          return this.http.get<Article[]>(`${this.getArticleBygategorieurl}/Univers_Telephonie`);
+          }
     ajoutArticle(article :Article): Observable<Article>{
       return this.http.post<Article>(`${this.addarticleUrl}`,article);
     }

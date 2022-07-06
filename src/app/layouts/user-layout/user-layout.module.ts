@@ -20,6 +20,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ArticleManagmentComponent } from 'app/pages/article-managment/article-managment.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AfficharticlebycategorieUniversTelephonieComponent } from 'app/pages/afficharticlebycategorie-univers-telephonie/afficharticlebycategorie-univers-telephonie.component';
+import { AfficharticlebycategorieUniversInformatiqueComponent } from 'app/pages/afficharticlebycategorie-univers-informatique/afficharticlebycategorie-univers-informatique.component';
 
 
 
@@ -27,6 +29,9 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AfficharticlebycategorieComponent,
+    AfficharticlebycategorieUniversTelephonieComponent,
+    AfficharticlebycategorieUniversInformatiqueComponent,
+
   ],
   imports: [
     CommonModule,
