@@ -14,6 +14,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { ReactiveFormsModule } from "@angular/forms";
 import { UserLayoutComponent } from "./layouts/user-layout/user-layout.component";
 import { ComponentsModule } from "./components/components.module";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -41,7 +42,8 @@ import { ComponentsModule } from "./components/components.module";
     ToastrModule.forRoot(),
 
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
 
   ],
   providers: [ ],
