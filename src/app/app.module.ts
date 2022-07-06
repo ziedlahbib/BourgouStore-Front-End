@@ -35,12 +35,7 @@ import { FooterFrontComponent } from "./components/footer-front/footer-front.com
     AdminLayoutComponent,
     UserLayoutComponent,
 
-    FooterComponent,
-    NavbarComponent,
-    SidebarComponent,
-
-    NavbarFrontComponent,
-    FooterFrontComponent,
+   
 
 
     
@@ -52,22 +47,12 @@ import { FooterFrontComponent } from "./components/footer-front/footer-front.com
     }),
     
     ToastrModule.forRoot(),
-
+    ComponentsModule,
     HttpClientModule,
     ReactiveFormsModule,
     NgbModule,
 
     
-
-  ],
-  exports: [
-    FooterComponent,
-    NavbarComponent,
-    SidebarComponent,
-
-    NavbarFrontComponent,
-    FooterFrontComponent,
-
 
   ],
   providers: [ ],
