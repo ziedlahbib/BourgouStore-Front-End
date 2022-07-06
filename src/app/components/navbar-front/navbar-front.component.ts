@@ -38,8 +38,8 @@ export class NavbarFrontComponent implements OnInit {
     private sidebarVisible: boolean;
     public menuItemsFRONT: any[];
   public isCollapsed = true;
-  articlepourachet:Article[]=[];
-  nbr:number;
+  //articlepourachet:Article[]=[];
+  //nbr:number;
     constructor(public location: Location, private element : ElementRef,private router: Router) {
         this.sidebarVisible = false;
     }
@@ -106,8 +106,10 @@ export class NavbarFrontComponent implements OnInit {
             return false;
         }
     }
+    /*
     addArticle(newArticle:Article){
         this.articlepourachet.push(newArticle);
         this.nbr=this.articlepourachet.length;
     }
+    */
 }

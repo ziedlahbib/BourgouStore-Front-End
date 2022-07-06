@@ -17,7 +17,7 @@ export class AfficharticlebycategorieComponent implements OnInit {
   listofarticlesearch:Article[]
   start=0;
   end=6;
-  @Output() newArticleEvent =new EventEmitter<Article>();
+  //@Output() newArticleEvent =new EventEmitter<Article>();
   //Univers_Gaming:String="Univers_Gaming";
   constructor(private articleservice:ArticleServiceService) { }
 
@@ -51,9 +51,9 @@ export class AfficharticlebycategorieComponent implements OnInit {
       endIndex = this.listofarticle.length;
     }
     this.listofarticlesPagination = this.listofarticle.slice(startIndex, endIndex);
-  }
+  }/*
   addnewArticle(value:Article){
     this.newArticleEvent.emit(value);
   }
-
+*/
 }
