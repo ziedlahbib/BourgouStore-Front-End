@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Article } from 'app/model/article.model';
 import { ArticleServiceService } from 'app/service/article-service.service';
 import { PageEvent } from '@angular/material/paginator';
@@ -13,11 +13,11 @@ export class AfficharticlebycategorieComponent implements OnInit {
 
   listofarticle:Article[];
   nbr:Number;
-  @Input()  articlepourachet:Article[]=[];
   listofarticlesPagination :Article[];
   listofarticlesearch:Article[]
   start=0;
   end=6;
+  @Output() newArticleEvent =new EventEmitter<Article>();
   //Univers_Gaming:String="Univers_Gaming";
   constructor(private articleservice:ArticleServiceService) { }
 
@@ -52,11 +52,8 @@ export class AfficharticlebycategorieComponent implements OnInit {
     }
     this.listofarticlesPagination = this.listofarticle.slice(startIndex, endIndex);
   }
-ajoutarticle(article:Article){
-this.articlepourachet.push(article);
-this.nbr=this.articlepourachet.length;
-console.log(this.nbr)
-  
-}
+  addnewArticle(value:Article){
+    this.newArticleEvent.emit(value);
+  }
 
 }

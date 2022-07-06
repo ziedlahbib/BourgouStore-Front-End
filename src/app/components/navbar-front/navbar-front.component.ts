@@ -1,6 +1,8 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { Router } from '@angular/router';
+import { Input } from '@angular/core';
+import { Article } from 'app/model/article.model';
 
 
 
@@ -36,6 +38,8 @@ export class NavbarFrontComponent implements OnInit {
     private sidebarVisible: boolean;
     public menuItemsFRONT: any[];
   public isCollapsed = true;
+  articlepourachet:Article[]=[];
+  nbr:number;
     constructor(public location: Location, private element : ElementRef,private router: Router) {
         this.sidebarVisible = false;
     }
@@ -101,5 +105,9 @@ export class NavbarFrontComponent implements OnInit {
         else {
             return false;
         }
+    }
+    addArticle(newArticle:Article){
+        this.articlepourachet.push(newArticle);
+        this.nbr=this.articlepourachet.length;
     }
 }

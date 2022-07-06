@@ -15,6 +15,11 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { UserLayoutComponent } from "./layouts/user-layout/user-layout.component";
 import { ComponentsModule } from "./components/components.module";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NavbarComponent } from "./components/navbar/navbar.component";
+import { FooterComponent } from "./components/footer/footer.component";
+import { SidebarComponent } from "./components/sidebar/sidebar.component";
+import { NavbarFrontComponent } from "./components/navbar-front/navbar-front.component";
+import { FooterFrontComponent } from "./components/footer-front/footer-front.component";
 
 
 
@@ -30,6 +35,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AdminLayoutComponent,
     UserLayoutComponent,
 
+    FooterComponent,
+    NavbarComponent,
+    SidebarComponent,
+
+    NavbarFrontComponent,
+    FooterFrontComponent,
+
 
     
   ],
@@ -38,12 +50,24 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
  RouterModule.forRoot(AppRoutes,{
       useHash: true
     }),
-    ComponentsModule,
+    
     ToastrModule.forRoot(),
 
     HttpClientModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+
+    
+
+  ],
+  exports: [
+    FooterComponent,
+    NavbarComponent,
+    SidebarComponent,
+
+    NavbarFrontComponent,
+    FooterFrontComponent,
+
 
   ],
   providers: [ ],
