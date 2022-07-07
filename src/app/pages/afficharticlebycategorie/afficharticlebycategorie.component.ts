@@ -3,6 +3,7 @@ import { Article } from 'app/model/article.model';
 import { ArticleServiceService } from 'app/service/article-service.service';
 import { PageEvent } from '@angular/material/paginator';
 import { Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-afficharticlebycategorie',
@@ -19,7 +20,7 @@ export class AfficharticlebycategorieComponent implements OnInit {
   end=6;
   //@Output() newArticleEvent =new EventEmitter<Article>();
   //Univers_Gaming:String="Univers_Gaming";
-  constructor(private articleservice:ArticleServiceService) { }
+  constructor(private articleservice:ArticleServiceService,private router:Router) { }
 
   ngOnInit(): void {
     this.articleservice.affichArticlebycategorieUnivers_Gaming().subscribe(
@@ -56,9 +57,9 @@ export class AfficharticlebycategorieComponent implements OnInit {
     this.newArticleEvent.emit(value);
   }
 */
-itemsCart:any[]=[];
 
 
+/*
 addtoCart(article:Article){
   let cartDataNull=localStorage.getItem('localCart');
 if(cartDataNull == null){
@@ -78,6 +79,20 @@ if(cartDataNull == null){
    }
 }
 
+}*/
+itemsCart:Article[]=[];
+addtoCart(article:Article){
+  this.itemsCart.push(article);
+  console.log("sss",this.itemsCart)
+  localStorage.setItem('localCart',JSON.stringify(this.itemsCart));
+  this.cartNumberFunc();
 }
-
+cartNumber:number=0;
+cartNumberFunc(){
+  var cartValue=JSON.parse(localStorage.getItem('localCart'));
+  this.cartNumber=cartValue.length;
+  console.log(this.cartNumber);
+  this.articleservice.cartSubject.next(this.cartNumber);
+}
+                  
 }
