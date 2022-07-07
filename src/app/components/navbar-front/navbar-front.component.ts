@@ -40,6 +40,7 @@ export class NavbarFrontComponent implements OnInit {
   public isCollapsed = true;
   //articlepourachet:Article[]=[];
   //nbr:number;
+  cartItem:number;
     constructor(public location: Location, private element : ElementRef,private router: Router) {
         this.sidebarVisible = false;
     }
@@ -114,11 +115,13 @@ export class NavbarFrontComponent implements OnInit {
         this.nbr=this.articlepourachet.length;
     }
     */
-    cartItem:number=0;
+    
     cartItemFunc(){
         if(localStorage.getItem('localCart')!=null){
             var cartCount=JSON.parse(localStorage.getItem('localCart'));
             this.cartItem=cartCount.length;
+            console.log('localstorage',cartCount.length);
+            console.log('localstorage',this.cartItem)
     }
     }
 }
