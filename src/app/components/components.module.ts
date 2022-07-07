@@ -9,6 +9,7 @@ import { FooterFrontComponent } from './footer-front/footer-front.component';
 import { NavbarFrontComponent } from './navbar-front/navbar-front.component';
 import {MatBadgeModule} from '@angular/material/badge';
 
+
 @NgModule({
   imports: [
     CommonModule,

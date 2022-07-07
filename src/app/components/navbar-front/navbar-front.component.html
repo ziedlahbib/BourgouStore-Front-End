@@ -32,14 +32,16 @@
       <app-afficharticlebycategorie (newArticleEvent)="addArticle($event)"></app-afficharticlebycategorie>
     -->
     <!--
-       <span *ngIf=" cartItem " class="fa-stack fa-2x has-badge" data-count="{{cartItem}}">
-      <i class="fa fa-circle fa-stack-2x"></i>
-      <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
-    </span>
+      
 
-    
+    <span class="material-icons" matBadge="18"matBadgeColor="warn" style="color: green;">shopping_cart</span>
     
     -->
-    <span class="material-icons" matBadge="{{cartItem}}"matBadgeColor="warn" style="color: green;">shopping_cart</span>
-   
+    
+    <span class="fa-stack fa-2x has-badge">
+      <i class="fa fa-circle fa-stack-2x"></i>
+
+      <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+    </span>
+    <p class="badge">{{cartItem}}</p>
   </nav>

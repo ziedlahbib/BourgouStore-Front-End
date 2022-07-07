@@ -1,4 +1,4 @@
-$shopping-cart-red: #DF0000;
+$shopping-cart-red: green;
 
 .fa-stack[data-count]:after{
   position:absolute;
@@ -18,9 +18,18 @@ $shopping-cart-red: #DF0000;
   border-style:solid;
 }
 .fa-circle {
-  color:#DF0000;
+  color:green;
 }
 
 .red-cart {
-	color: #DF0000; background:white;
+	color: green; background:white;
+}
+.badge{
+  position:absolute;
+  top: 5px;;
+  right:  30px;
+  height: 5px;
+  width: 5px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
 }
