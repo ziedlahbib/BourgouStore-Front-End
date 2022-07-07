@@ -7,14 +7,14 @@ import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterFrontComponent } from './footer-front/footer-front.component';
 import { NavbarFrontComponent } from './navbar-front/navbar-front.component';
-
+import {MatBadgeModule} from '@angular/material/badge';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
     NgbModule,
-    
+    MatBadgeModule
   ],
   declarations: [
     FooterComponent,
