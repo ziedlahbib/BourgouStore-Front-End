@@ -18,6 +18,17 @@
     </div>
     <mat-icon>delete</mat-icon>
  </mat-card>
+<div class="cardzied">
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Prix Total</h5>
+      <h6 class="card-subtitle mb-2 text-muted" *ngFor="let a of cartItem">{{a.name}}</h6>
+      <button type="button" class="btn btn-secondary">acheter</button>
+      <button type="button" class="btn btn-warning">annuler</button>
+    </div>
+  </div>
+</div>
+
  
 
 

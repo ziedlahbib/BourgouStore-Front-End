@@ -50,4 +50,18 @@ export class TelephonefixeComponent implements OnInit {
     }
     this.listofarticlesPagination = this.listofarticle.slice(startIndex, endIndex);
   }
+  itemsCart:Article[]=[];
+addtoCart(article:Article){
+  this.itemsCart.push(article);
+  console.log("sss",this.itemsCart)
+  localStorage.setItem('localCart',JSON.stringify(this.itemsCart));
+  this.cartNumberFunc();
+}
+cartNumber:number=0;
+cartNumberFunc(){
+  var cartValue=JSON.parse(localStorage.getItem('localCart'));
+  this.cartNumber=cartValue.length;
+  console.log(this.cartNumber);
+  this.articleservice.cartSubject.next(this.cartNumber);
+}
 }
