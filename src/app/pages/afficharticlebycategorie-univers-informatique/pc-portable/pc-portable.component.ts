@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { Article } from 'app/model/article.model';
-import { PageEvent } from '@angular/material/paginator';
 import { Input } from '@angular/core';
 import { ArticleServiceService } from 'app/service/article-service.service';
+import { PageEvent } from '@angular/material/paginator';
 
 @Component({
-  selector: 'app-afficharticlebycategorie-univers-telephonie',
-  templateUrl: './afficharticlebycategorie-univers-telephonie.component.html',
-  styleUrls: ['./afficharticlebycategorie-univers-telephonie.component.scss']
+  selector: 'app-pc-portable',
+  templateUrl: './pc-portable.component.html',
+  styleUrls: ['./pc-portable.component.scss']
 })
-export class AfficharticlebycategorieUniversTelephonieComponent implements OnInit {
+export class PcPortableComponent implements OnInit {
 
+  
   listofarticle:Article[];
   nbr:Number;
   @Input()  articlepourachet:Article[]=[];
@@ -21,7 +22,7 @@ export class AfficharticlebycategorieUniversTelephonieComponent implements OnIni
   constructor(private articleservice:ArticleServiceService) { }
 
   ngOnInit(): void {
-    this.articleservice.affichArticlebycategorieUnivers_Telephonie().subscribe(
+    this.articleservice.affichArticlebycategorieUniversInformatiquepcportable().subscribe(
       data=>{
         console.log(data);
         this.listofarticle=data;
@@ -29,7 +30,6 @@ export class AfficharticlebycategorieUniversTelephonieComponent implements OnIni
       }
     )
   }
-
   applyFilter(filterValue: string) {
     filterValue = filterValue.toUpperCase(); // Datasource defaults to lowercase matches
     /*
@@ -50,13 +50,5 @@ export class AfficharticlebycategorieUniversTelephonieComponent implements OnIni
     }
     this.listofarticlesPagination = this.listofarticle.slice(startIndex, endIndex);
   }
-  /*
-ajoutarticle(article:Article){
-this.articlepourachet.push(article);
-this.nbr=this.articlepourachet.length;
-console.log(this.nbr)
-  
-}
-*/
 
 }

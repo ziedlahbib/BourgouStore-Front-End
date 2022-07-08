@@ -1,33 +1,35 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Article } from 'app/model/article.model';
+import { ArticleServiceService } from 'app/service/article-service.service';
 import { PageEvent } from '@angular/material/paginator';
 import { Input } from '@angular/core';
-import { ArticleServiceService } from 'app/service/article-service.service';
+import { Router } from '@angular/router';
+
 
 @Component({
-  selector: 'app-afficharticlebycategorie-univers-telephonie',
-  templateUrl: './afficharticlebycategorie-univers-telephonie.component.html',
-  styleUrls: ['./afficharticlebycategorie-univers-telephonie.component.scss']
+  selector: 'app-unitegaming',
+  templateUrl: './unitegaming.component.html',
+  styleUrls: ['./unitegaming.component.scss']
 })
-export class AfficharticlebycategorieUniversTelephonieComponent implements OnInit {
+export class UnitegamingComponent implements OnInit {
 
   listofarticle:Article[];
   nbr:Number;
-  @Input()  articlepourachet:Article[]=[];
   listofarticlesPagination :Article[];
   listofarticlesearch:Article[]
   start=0;
   end=6;
-  constructor(private articleservice:ArticleServiceService) { }
+  constructor(private articleservice:ArticleServiceService,private router:Router) { }
 
   ngOnInit(): void {
-    this.articleservice.affichArticlebycategorieUnivers_Telephonie().subscribe(
+    this.articleservice.affichArticlebycategorieUnivers_Gamingunitegaming().subscribe(
       data=>{
         console.log(data);
         this.listofarticle=data;
         this.listofarticlesPagination=this.listofarticle.slice(this.start, this.end)
       }
     )
+
   }
 
   applyFilter(filterValue: string) {
@@ -50,13 +52,4 @@ export class AfficharticlebycategorieUniversTelephonieComponent implements OnIni
     }
     this.listofarticlesPagination = this.listofarticle.slice(startIndex, endIndex);
   }
-  /*
-ajoutarticle(article:Article){
-this.articlepourachet.push(article);
-this.nbr=this.articlepourachet.length;
-console.log(this.nbr)
-  
-}
-*/
-
 }

@@ -50,11 +50,12 @@ export class AfficharticlebycategorieUniversInformatiqueComponent implements OnI
     }
     this.listofarticlesPagination = this.listofarticle.slice(startIndex, endIndex);
   }
+  /*
 ajoutarticle(article:Article){
 this.articlepourachet.push(article);
 this.nbr=this.articlepourachet.length;
 console.log(this.nbr)
   
-}
+}*/
 
 }

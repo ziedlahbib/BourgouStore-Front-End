@@ -24,6 +24,23 @@ import { AfficharticlebycategorieUniversTelephonieComponent } from 'app/pages/af
 import { AfficharticlebycategorieUniversInformatiqueComponent } from 'app/pages/afficharticlebycategorie-univers-informatique/afficharticlebycategorie-univers-informatique.component';
 import { PanierComponent } from 'app/pages/panier/panier.component';
 import {MatIconModule} from '@angular/material/icon'
+import { ConsoledujeuxComponent } from 'app/pages/afficharticlebycategorie/consoledujeux/consoledujeux.component';
+import { PcportableComponent } from 'app/pages/afficharticlebycategorie/pcportable/pcportable.component';
+import { UnitegamingComponent } from 'app/pages/afficharticlebycategorie/unitegaming/unitegaming.component';
+import { PerepheriquepcgamingComponent } from 'app/pages/afficharticlebycategorie/perepheriquepcgaming/perepheriquepcgaming.component';
+import { ComposantpcgamingComponent } from 'app/pages/afficharticlebycategorie/composantpcgaming/composantpcgaming.component';
+import { TabletteComponent } from 'app/pages/afficharticlebycategorie-univers-informatique/tablette/tablette.component';
+import { PcPortableComponent } from 'app/pages/afficharticlebycategorie-univers-informatique/pc-portable/pc-portable.component';
+import { PcbureauComponent } from 'app/pages/afficharticlebycategorie-univers-informatique/pcbureau/pcbureau.component';
+import { PrefaccessstockComponent } from 'app/pages/afficharticlebycategorie-univers-informatique/prefaccessstock/prefaccessstock.component';
+import { ComposantetmaintComponent } from 'app/pages/afficharticlebycategorie-univers-informatique/composantetmaint/composantetmaint.component';
+import { SmartphoneComponent } from 'app/pages/afficharticlebycategorie-univers-telephonie/smartphone/smartphone.component';
+import { AppleComponent } from 'app/pages/afficharticlebycategorie-univers-telephonie/apple/apple.component';
+import { GsmComponent } from 'app/pages/afficharticlebycategorie-univers-telephonie/gsm/gsm.component';
+import { TelephonefixeComponent } from 'app/pages/afficharticlebycategorie-univers-telephonie/telephonefixe/telephonefixe.component';
+import { AccestelComponent } from 'app/pages/afficharticlebycategorie-univers-telephonie/accestel/accestel.component';
+import { SmartwatchComponent } from 'app/pages/afficharticlebycategorie-univers-telephonie/smartwatch/smartwatch.component';
+
 
 
 
@@ -34,6 +51,24 @@ import {MatIconModule} from '@angular/material/icon'
     AfficharticlebycategorieUniversTelephonieComponent,
     AfficharticlebycategorieUniversInformatiqueComponent,
     PanierComponent,
+    ConsoledujeuxComponent,
+    PcportableComponent,
+    UnitegamingComponent,
+    PerepheriquepcgamingComponent,
+    ComposantpcgamingComponent,
+    TabletteComponent,
+    PcPortableComponent,
+    PcbureauComponent,
+    PrefaccessstockComponent,
+    ComposantetmaintComponent,
+    SmartphoneComponent,
+    AppleComponent,
+    GsmComponent,
+    TelephonefixeComponent,
+    AccestelComponent,
+    SmartwatchComponent,
+
+   
 
   ],
   imports: [

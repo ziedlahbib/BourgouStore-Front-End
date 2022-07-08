@@ -15,7 +15,8 @@ export class ArticleServiceService {
   addarticleUrl="/api/article/add-article";
   uploadfilef="/api/FileTrip/uploadf";
   getfiledetail="/api/FileTrip/filesdetail";
-  getArticleBygategorieurl="/api/article/get-article-by-categorie"
+  getArticleBygategorieurl="/api/article/get-article-by-categorie";
+  getArticleByunivergaconsoledujeuurl="/api/article/get-article-by-categorie"
 
   constructor(private http : HttpClient) { }
 
@@ -31,6 +32,54 @@ export class ArticleServiceService {
         affichArticlebycategorieUnivers_Telephonie() : Observable<Article[]> {
           return this.http.get<Article[]>(`${this.getArticleBygategorieurl}/Univers_Telephonie`);
           }
+          affichArticlebycategorieUnivers_Gamingconsoledujeu() : Observable<Article[]> {
+            return this.http.get<Article[]>("/api/article/get-article-by-categorie-ET-Type/Univers_Gaming/Console_de_jeux");
+            }
+            affichArticlebycategorieUnivers_Gamingcomposantpcgaming() : Observable<Article[]> {
+              return this.http.get<Article[]>("/api/article/get-article-by-categorie-ET-Type/Univers_Gaming/Composant_PC_Gaming");
+              }
+              affichArticlebycategorieUnivers_Gamingpcportable() : Observable<Article[]> {
+                return this.http.get<Article[]>("/api/article/get-article-by-categorie-ET-Type/Univers_Gaming/Pc_Portable");
+                }
+                affichArticlebycategorieUnivers_Gamingprephpcgaming() : Observable<Article[]> {
+                  return this.http.get<Article[]>("/api/article/get-article-by-categorie-ET-Type/Univers_Gaming/Perephérique_pc_gaming");
+                  }
+                  affichArticlebycategorieUnivers_Gamingunitegaming() : Observable<Article[]> {
+                    return this.http.get<Article[]>("/api/article/get-article-by-categorie-ET-Type/Univers_Gaming/Unité_Gaming");
+                    }
+      affichArticlebycategorieUniversInformatiquetablette() : Observable<Article[]> {
+             return this.http.get<Article[]>("/api/article/get-article-by-categorie-ET-Type/Univers_Informatique/Tablette");
+      }
+        affichArticlebycategorieUniversInformatiquepcportable() : Observable<Article[]> {
+          return this.http.get<Article[]>("/api/article/get-article-by-categorie-ET-Type/Univers_Informatique/PC_Portable");
+        }
+          affichArticlebycategorieUniversInformatiquepcbureau() : Observable<Article[]> {
+            return this.http.get<Article[]>("/api/article/get-article-by-categorie-ET-Type/Univers_Informatique/Pc_De_Bureau");
+          }
+            affichArticlebycategorieUniversInformatiqueperfetaccesstock() : Observable<Article[]> {
+              return this.http.get<Article[]>("/api/article/get-article-by-categorie-ET-Type/Univers_Informatique/Péréphérique_et_Accessoire_Stockage");
+            }
+              affichArticlebycategorieUniversInformatiquecompetmaint() : Observable<Article[]> {
+                return this.http.get<Article[]>("/api/article/get-article-by-categorie-ET-Type/Univers_Informatique/Composant_et_maintenance");
+              }
+   affichArticlebycategorieUniverstelefoniquesmartphone() : Observable<Article[]> {
+     return this.http.get<Article[]>("/api/article/get-article-by-categorie-ET-Type/Univers_Telephonie/Smartphone");
+    }
+    affichArticlebycategorieUniverstelefoniqueapple() : Observable<Article[]> {
+      return this.http.get<Article[]>("/api/article/get-article-by-categorie-ET-Type/Univers_Telephonie/Apple");
+     }
+     affichArticlebycategorieUniverstelefoniqueGSM() : Observable<Article[]> {
+      return this.http.get<Article[]>("/api/article/get-article-by-categorie-ET-Type/Univers_Telephonie/GSM");
+     }
+     affichArticlebycategorieUniverstelefoniqueTéléphone_fixe() : Observable<Article[]> {
+      return this.http.get<Article[]>("/api/article/get-article-by-categorie-ET-Type/Univers_Telephonie/Téléphone_fixe");
+     }
+     affichArticlebycategorieUniverstelefoniqueAccessoir_telephoniies() : Observable<Article[]> {
+      return this.http.get<Article[]>("/api/article/get-article-by-categorie-ET-Type/Univers_Telephonie/Accessoir_telephoniies");
+     }
+     affichArticlebycategorieUniverstelefoniquesmartwatch() : Observable<Article[]> {
+      return this.http.get<Article[]>("/api/article/get-article-by-categorie-ET-Type/Univers_Telephonie/Smartwatch");
+     }
     ajoutArticle(article :Article): Observable<Article>{
       return this.http.post<Article>(`${this.addarticleUrl}`,article);
     }

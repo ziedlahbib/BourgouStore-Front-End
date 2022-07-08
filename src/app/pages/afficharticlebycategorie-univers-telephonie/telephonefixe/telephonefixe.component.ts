@@ -5,11 +5,11 @@ import { Input } from '@angular/core';
 import { ArticleServiceService } from 'app/service/article-service.service';
 
 @Component({
-  selector: 'app-afficharticlebycategorie-univers-telephonie',
-  templateUrl: './afficharticlebycategorie-univers-telephonie.component.html',
-  styleUrls: ['./afficharticlebycategorie-univers-telephonie.component.scss']
+  selector: 'app-telephonefixe',
+  templateUrl: './telephonefixe.component.html',
+  styleUrls: ['./telephonefixe.component.scss']
 })
-export class AfficharticlebycategorieUniversTelephonieComponent implements OnInit {
+export class TelephonefixeComponent implements OnInit {
 
   listofarticle:Article[];
   nbr:Number;
@@ -21,7 +21,7 @@ export class AfficharticlebycategorieUniversTelephonieComponent implements OnIni
   constructor(private articleservice:ArticleServiceService) { }
 
   ngOnInit(): void {
-    this.articleservice.affichArticlebycategorieUnivers_Telephonie().subscribe(
+    this.articleservice.affichArticlebycategorieUniverstelefoniqueTéléphone_fixe().subscribe(
       data=>{
         console.log(data);
         this.listofarticle=data;
@@ -50,13 +50,4 @@ export class AfficharticlebycategorieUniversTelephonieComponent implements OnIni
     }
     this.listofarticlesPagination = this.listofarticle.slice(startIndex, endIndex);
   }
-  /*
-ajoutarticle(article:Article){
-this.articlepourachet.push(article);
-this.nbr=this.articlepourachet.length;
-console.log(this.nbr)
-  
-}
-*/
-
 }

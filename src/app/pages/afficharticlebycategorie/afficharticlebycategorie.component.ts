@@ -33,6 +33,7 @@ export class AfficharticlebycategorieComponent implements OnInit {
 
   }
 
+ 
   applyFilter(filterValue: string) {
     filterValue = filterValue.toUpperCase(); // Datasource defaults to lowercase matches
     /*

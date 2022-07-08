@@ -4,13 +4,15 @@ import { PageEvent } from '@angular/material/paginator';
 import { Input } from '@angular/core';
 import { ArticleServiceService } from 'app/service/article-service.service';
 
-@Component({
-  selector: 'app-afficharticlebycategorie-univers-telephonie',
-  templateUrl: './afficharticlebycategorie-univers-telephonie.component.html',
-  styleUrls: ['./afficharticlebycategorie-univers-telephonie.component.scss']
-})
-export class AfficharticlebycategorieUniversTelephonieComponent implements OnInit {
 
+@Component({
+  selector: 'app-gsm',
+  templateUrl: './gsm.component.html',
+  styleUrls: ['./gsm.component.scss']
+})
+export class GsmComponent implements OnInit {
+
+  
   listofarticle:Article[];
   nbr:Number;
   @Input()  articlepourachet:Article[]=[];
@@ -21,7 +23,7 @@ export class AfficharticlebycategorieUniversTelephonieComponent implements OnIni
   constructor(private articleservice:ArticleServiceService) { }
 
   ngOnInit(): void {
-    this.articleservice.affichArticlebycategorieUnivers_Telephonie().subscribe(
+    this.articleservice.affichArticlebycategorieUniverstelefoniqueGSM().subscribe(
       data=>{
         console.log(data);
         this.listofarticle=data;
@@ -50,13 +52,4 @@ export class AfficharticlebycategorieUniversTelephonieComponent implements OnIni
     }
     this.listofarticlesPagination = this.listofarticle.slice(startIndex, endIndex);
   }
-  /*
-ajoutarticle(article:Article){
-this.articlepourachet.push(article);
-this.nbr=this.articlepourachet.length;
-console.log(this.nbr)
-  
-}
-*/
-
 }
