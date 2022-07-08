@@ -15,6 +15,10 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { UserLayoutComponent } from "./layouts/user-layout/user-layout.component";
 import { ComponentsModule } from "./components/components.module";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {MatDialogModule} from '@angular/material/dialog';
+
+
+
 
 
 
@@ -34,6 +38,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppComponent,
     AdminLayoutComponent,
     UserLayoutComponent,
+
+    
   
 
 
@@ -56,6 +62,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     ReactiveFormsModule,
     NgbModule,
+    MatDialogModule
+
 
     
 

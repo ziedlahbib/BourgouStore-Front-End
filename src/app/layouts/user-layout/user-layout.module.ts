@@ -40,6 +40,8 @@ import { GsmComponent } from 'app/pages/afficharticlebycategorie-univers-telepho
 import { TelephonefixeComponent } from 'app/pages/afficharticlebycategorie-univers-telephonie/telephonefixe/telephonefixe.component';
 import { AccestelComponent } from 'app/pages/afficharticlebycategorie-univers-telephonie/accestel/accestel.component';
 import { SmartwatchComponent } from 'app/pages/afficharticlebycategorie-univers-telephonie/smartwatch/smartwatch.component';
+import { PassercommandedialogComponent } from 'app/pages/passercommandedialog/passercommandedialog.component';
+
 
 
 
@@ -67,6 +69,8 @@ import { SmartwatchComponent } from 'app/pages/afficharticlebycategorie-univers-
     TelephonefixeComponent,
     AccestelComponent,
     SmartwatchComponent,
+    PassercommandedialogComponent,
+
 
    
 
@@ -83,7 +87,8 @@ import { SmartwatchComponent } from 'app/pages/afficharticlebycategorie-univers-
     MatFormFieldModule,
     MatInputModule,
     MatDialogModule,
-    MatIconModule
+    MatIconModule,
+    
   ]
 })
 export class UserLayoutModule { }
