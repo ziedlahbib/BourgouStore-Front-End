@@ -41,7 +41,7 @@ export class AjoutArticleComponent implements OnInit {
       name: ['', Validators.required],
       categorie: ['',Validators.required],
       type: ['',Validators.required],
-      prix: ['', [Validators.required,,Validators.pattern('^[0-9]'+'.'+'[0-9]*')]],
+      prix: ['', [Validators.required,,Validators.pattern('^[0-9]+(\.[0-9]{1,2})?$')]],
       file: [null, Validators.required],
   });
 
