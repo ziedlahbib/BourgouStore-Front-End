@@ -95,5 +95,5 @@ cartNumberFunc(){
   console.log(this.cartNumber);
   this.articleservice.cartSubject.next(this.cartNumber);
 }
-                  
+        
 }

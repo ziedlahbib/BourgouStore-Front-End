@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 })
 export class ComposantpcgamingComponent implements OnInit {
 
+  showFiller = false;
   listofarticle:Article[];
   nbr:Number;
   listofarticlesPagination :Article[];

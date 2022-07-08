@@ -42,6 +42,8 @@ import { AccestelComponent } from 'app/pages/afficharticlebycategorie-univers-te
 import { SmartwatchComponent } from 'app/pages/afficharticlebycategorie-univers-telephonie/smartwatch/smartwatch.component';
 import { PassercommandedialogComponent } from 'app/pages/passercommandedialog/passercommandedialog.component';
 
+import { MatSidenavModule } from '@angular/material/sidenav';
+
 
 
 
@@ -88,6 +90,7 @@ import { PassercommandedialogComponent } from 'app/pages/passercommandedialog/pa
     MatInputModule,
     MatDialogModule,
     MatIconModule,
+    MatSidenavModule,
     
   ]
 })
