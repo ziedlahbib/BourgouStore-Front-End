@@ -39,6 +39,7 @@ dialoggg(){
 });
   dialogRef.updatePosition({ top: '170px', left: '500px' });
   dialogRef.afterClosed().subscribe(data => {
+
   });
 }
 }
