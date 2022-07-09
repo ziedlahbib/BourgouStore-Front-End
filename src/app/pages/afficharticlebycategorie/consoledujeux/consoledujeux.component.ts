@@ -50,6 +50,7 @@ export class ConsoledujeuxComponent implements OnInit {
   }
   itemsCart:Article[]=[];
   addtoCart(article:Article){
+    this.itemsCart=JSON.parse(localStorage.getItem('localCart'));
     this.itemsCart.push(article);
     console.log("sss",this.itemsCart)
     localStorage.setItem('localCart',JSON.stringify(this.itemsCart));
