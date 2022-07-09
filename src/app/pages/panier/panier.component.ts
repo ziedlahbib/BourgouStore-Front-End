@@ -15,6 +15,7 @@ export class PanierComponent implements OnInit {
 
   ngOnInit(): void {
     this.cartItemFunc();
+    this.calculeprixtotal();
   }
   cartItem:Article[];
   cartItemFunc(){
@@ -41,5 +42,12 @@ dialoggg(){
   dialogRef.afterClosed().subscribe(data => {
 
   });
+}
+prixtotal:number=0;
+calculeprixtotal():number{
+  for(let i of this.cartItem){
+      this.prixtotal=this.prixtotal+i.prix;
+  }
+  return this.prixtotal;
 }
 }

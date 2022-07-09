@@ -7,7 +7,7 @@ export class Article {
     id: String;
     description: String;
     name:String;
-    prix: Number;
+    prix: number;
     categorie:Categorie;
     type:Type;
     files:FileDBTrip;
